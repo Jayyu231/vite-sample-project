@@ -7,14 +7,25 @@ import { useState } from "react";
 function NewApp() {
   //   let drinkItem1 = 20;
   // [value, method]
-  const [drinkItem1, setA] = useState(20);
-  const [drinkItem2, setB] = useState(18);
-  const [drinkItem3, setC] = useState(34);
-  const [drinkItem4, setD] = useState(10);
-  const [drinkItem5, setE] = useState(25);
-  const [drinkItem6, setF] = useState(20);
-  const [drinkItem7, setG] = useState(18);
-  const [drinkItem8, setH] = useState(20);
+  // Quantity number variables in Stock
+  const [drinkQuantity1, setA] = useState(20);
+  const [drinkQuantity2, setB] = useState(18);
+  const [drinkQuantity3, setC] = useState(34);
+  const [drinkQuantity4, setD] = useState(10);
+  const [drinkQuantity5, setE] = useState(25);
+  const [drinkQuantity6, setF] = useState(20);
+  const [drinkQuantity7, setG] = useState(18);
+  const [drinkQuantity8, setH] = useState(20);
+
+  // DrinkItem name variables
+  const [drinkItem1, setDrinkItem1] = useState("珍珠奶茶");
+  const [drinkItem2, setDrinkItem2] = useState("冬瓜檸檬");
+  const [drinkItem3, setDrinkItem3] = useState("冬瓜檸檬");
+  const [drinkItem4, setDrinkItem4] = useState("四季春茶");
+  const [drinkItem5, setDrinkItem5] = useState("阿薩姆奶茶");
+  const [drinkItem6, setDrinkItem6] = useState("檸檬冰茶");
+  const [drinkItem7, setDrinkItem7] = useState("芒果綠茶");
+  const [drinkItem8, setDrinkItem8] = useState("抹茶拿鐵");
 
   return (
     <table>
@@ -28,7 +39,14 @@ function NewApp() {
       </thead>
       <tbody>
         <tr>
-          <td>珍珠奶茶</td>
+          <td
+            onClick={() => {
+              //   let result = prompt("請輸入想要的飲料名稱");
+              setDrinkItem1(prompt("請輸入想要的飲料名稱"));
+            }}
+          >
+            {drinkItem1}
+          </td>
           <td>
             <small>香濃奶茶搭配QQ珍珠</small>
           </td>
@@ -36,18 +54,15 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setA(drinkItem1 - 1);
-                // console.log(drinkItem1);
-                // drinkItem1++;
-                // console.log(drinkItem1);
+                setA(drinkQuantity1 - 1);
               }}
             >
               -
             </button>
-            {drinkItem1}
+            {drinkQuantity1}
             <button
               onClick={() => {
-                setA(drinkItem1 + 1);
+                setA(drinkQuantity1 + 1);
               }}
             >
               +
@@ -55,7 +70,13 @@ function NewApp() {
           </td>
         </tr>
         <tr>
-          <td>冬瓜檸檬</td>
+          <td
+            onClick={() => {
+              setDrinkItem2(prompt("請輸入想要的飲料名稱"));
+            }}
+          >
+            {drinkItem2}
+          </td>
           <td>
             <small>清新冬瓜配上新鮮檸檬</small>
           </td>
@@ -63,15 +84,15 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setB(drinkItem2 - 1);
+                setB(drinkQuantity2 - 1);
               }}
             >
               -
             </button>
-            {drinkItem2}
+            {drinkQuantity2}
             <button
               onClick={() => {
-                setB(drinkItem2 + 1);
+                setB(drinkQuantity2 + 1);
               }}
             >
               +
@@ -79,7 +100,13 @@ function NewApp() {
           </td>
         </tr>
         <tr>
-          <td>翡翠檸檬</td>
+          <td
+            onClick={() => {
+              setDrinkItem3(prompt("請輸入想要的飲料名稱"));
+            }}
+          >
+            {drinkItem3}
+          </td>
           <td>
             <small>綠茶與檸檬的完美結合</small>
           </td>
@@ -87,15 +114,15 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setC(drinkItem3 - 1);
+                setC(drinkQuantity3 - 1);
               }}
             >
               -
             </button>
-            {drinkItem3}
+            {drinkQuantity3}
             <button
               onClick={() => {
-                setC(drinkItem3 + 1);
+                setC(drinkQuantity3 + 1);
               }}
             >
               +
@@ -103,7 +130,13 @@ function NewApp() {
           </td>
         </tr>
         <tr>
-          <td>四季春茶</td>
+          <td
+            onClick={() => {
+              setDrinkItem4(prompt("請輸入想要的飲料名稱"));
+            }}
+          >
+            {drinkItem4}
+          </td>
           <td>
             <small>香醇四季春茶，回甘無比</small>
           </td>
@@ -111,15 +144,15 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setD(drinkItem4 - 1);
+                setD(drinkQuantity4 - 1);
               }}
             >
               -
             </button>
-            {drinkItem4}
+            {drinkQuantity4}
             <button
               onClick={() => {
-                setD(drinkItem4 + 1);
+                setD(drinkQuantity4 + 1);
               }}
             >
               +
@@ -127,7 +160,13 @@ function NewApp() {
           </td>
         </tr>
         <tr>
-          <td>阿薩姆奶茶</td>
+          <td
+            onClick={() => {
+              setDrinkItem5(prompt("請輸入飲品名稱"));
+            }}
+          >
+            {drinkItem5}
+          </td>
           <td>
             <small>阿薩姆紅茶搭配香醇鮮奶</small>
           </td>
@@ -135,15 +174,15 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setE(drinkItem5 - 1);
+                setE(drinkQuantity5 - 1);
               }}
             >
               -
             </button>
-            {drinkItem5}
+            {drinkQuantity5}
             <button
               onClick={() => {
-                setE(drinkItem5 + 1);
+                setE(drinkQuantity5 + 1);
               }}
             >
               +
@@ -151,7 +190,13 @@ function NewApp() {
           </td>
         </tr>
         <tr>
-          <td>檸檬冰茶</td>
+          <td
+            onClick={() => {
+              setDrinkItem6(prompt("請輸入飲品名稱"));
+            }}
+          >
+            {drinkItem6}
+          </td>
           <td>
             <small>檸檬與冰茶的清新組合</small>
           </td>
@@ -159,15 +204,15 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setF(drinkItem6 - 1);
+                setF(drinkQuantity6 - 1);
               }}
             >
               -
             </button>
-            {drinkItem6}
+            {drinkQuantity6}
             <button
               onClick={() => {
-                setF(drinkItem6 + 1);
+                setF(drinkQuantity6 + 1);
               }}
             >
               +
@@ -175,7 +220,13 @@ function NewApp() {
           </td>
         </tr>
         <tr>
-          <td>芒果綠茶</td>
+          <td
+            onClick={() => {
+              setDrinkItem7(prompt("請輸入飲品名稱"));
+            }}
+          >
+            {drinkItem7}
+          </td>
           <td>
             <small>芒果與綠茶的獨特風味</small>
           </td>
@@ -183,15 +234,15 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setG(drinkItem7 - 1);
+                setG(drinkQuantity7 - 1);
               }}
             >
               -
             </button>
-            {drinkItem7}
+            {drinkQuantity7}
             <button
               onClick={() => {
-                setG(drinkItem7 + 1);
+                setG(drinkQuantity7 + 1);
               }}
             >
               +
@@ -199,7 +250,13 @@ function NewApp() {
           </td>
         </tr>
         <tr>
-          <td>抹茶拿鐵</td>
+          <td
+            onClick={() => {
+              setDrinkItem8(prompt("請輸入飲品名稱"));
+            }}
+          >
+            {drinkItem8}
+          </td>
           <td>
             <small>抹茶與鮮奶的絕配</small>
           </td>
@@ -207,15 +264,15 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setH(drinkItem8 - 1);
+                setH(drinkQuantity8 - 1);
               }}
             >
               -
             </button>
-            {drinkItem8}
+            {drinkQuantity8}
             <button
               onClick={() => {
-                setH(drinkItem8 + 1);
+                setH(drinkQuantity8 + 1);
               }}
             >
               +
