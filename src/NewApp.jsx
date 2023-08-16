@@ -41,7 +41,6 @@ function NewApp() {
         <tr>
           <td
             onClick={() => {
-              //   let result = prompt("請輸入想要的飲料名稱");
               setDrinkItem1(prompt("請輸入想要的飲料名稱"));
             }}
           >
@@ -54,7 +53,9 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setA(drinkQuantity1 - 1);
+                if (drinkQuantity1 > 0) {
+                  setA(drinkQuantity1 - 1);
+                }
               }}
             >
               -
@@ -84,7 +85,9 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setB(drinkQuantity2 - 1);
+                if (drinkQuantity2 > 0) {
+                  setB(drinkQuantity2 - 1);
+                }
               }}
             >
               -
@@ -114,7 +117,9 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setC(drinkQuantity3 - 1);
+                if (drinkQuantity3 > 0) {
+                  setC(drinkQuantity3 - 1);
+                }
               }}
             >
               -
@@ -144,7 +149,9 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setD(drinkQuantity4 - 1);
+                if (drinkQuantity4 > 0) {
+                  setD(drinkQuantity4 - 1);
+                }
               }}
             >
               -
@@ -174,7 +181,9 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setE(drinkQuantity5 - 1);
+                if (drinkQuantity5 > 0) {
+                  setE(drinkQuantity5 - 1);
+                }
               }}
             >
               -
@@ -204,7 +213,9 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setF(drinkQuantity6 - 1);
+                if (drinkQuantity6 > 0) {
+                  setF(drinkQuantity6 - 1);
+                }
               }}
             >
               -
@@ -234,7 +245,7 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setG(drinkQuantity7 - 1);
+                if (drinkQuantity7 > 0) setG(drinkQuantity7 - 1);
               }}
             >
               -
@@ -264,7 +275,7 @@ function NewApp() {
           <td>
             <button
               onClick={() => {
-                setH(drinkQuantity8 - 1);
+                if (drinkQuantity8 > 0) setH(drinkQuantity8 - 1);
               }}
             >
               -
