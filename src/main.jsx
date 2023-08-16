@@ -1,10 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import drinkShop from "react-dom/client";
+import NewApp from "./NewApp";
+// import App from ArrayMethod
+// import ArrayMethod from './ArrayMethod'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <NewApp />
+  </React.StrictMode>
+);
